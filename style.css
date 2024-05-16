@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #0f1012;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+
+  color: white;
+  padding: 25px;
+  border-radius: 6px;
+  width: 28rem;
+  max-width: 32rem;
+  background-color: #212429;
+}
+
+.title {
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  margin: auto;
+  letter-spacing: 0.1em;
+}
+
+.input__field {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 0.5em;
+  margin: 2.5em 0;
+}
+
+#name {
+  background-color: #0f1012;
+  color: white;
+  padding: 0.8em 0.5em;
+  border: 1px solid #020332;
+  border-radius: 0.5em;
+  font-size: 1em;
+  outline: none;
+}
+
+.predict__btn {
+  background-color: #7e5eff;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5em;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.female {
+  background-color: #ff5f96;
+}
+.male {
+  background-color: #5a72e9;
+}
+
+.null {
+  background-color: #0f1012;
+}
+
+#info {
+  padding: 2em 1em;
+  text-align: center;
+  border-radius: 0.9em;
+}
+
+#result-name {
+  text-transform: capitalize;
+  font-weight: 500;
+  color: #edecec;
+}
+
+#gender-icon {
+  display: block;
+  width: 5em;
+  position: relative;
+  margin: 2em auto 1em auto;
+}
+
+#gender {
+  color: #ffffff;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+#prob {
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  color: #edecec;
+}
+
+/* Loading */
+
+#loading {
+  z-index: 999;
+  height: 2em;
+  width: fit-content;
+  overflow: show;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  color: #fff;
+}
+
+#loading::after {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+#author{
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: 20px;
+}
+
+#author a{
+    text-decoration: none;
+    color: chocolate;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 640px) {
+    .container{
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+
+    .card{
+        max-width: 90%;
+    }
+
+    .title{
+        letter-spacing: 0;
+    }
+
+    .input__field{
+        display: block;
+    }
+
+    #name{
+        width: 100%;
+    }
+
+    .predict__btn{
+        width: 50%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 20px;
+        padding-block: 12px;
+    }
+
+    #author{
+        display: none;
+    }
+}
